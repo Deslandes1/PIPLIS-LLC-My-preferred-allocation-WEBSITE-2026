@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deslandes1.github.io/PIPLIS-ELECTRONICS/sitemap.xml
