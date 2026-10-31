@@ -14,13 +14,13 @@
 <meta name="keywords" content="electronics repair Tampa, phone repair Temple Terrace, laptop repair Tampa, security camera installation Tampa, smart home setup, small business IT support Tampa, PIPLIS LLC" />
 <meta name="author" content="PIPLIS LLC" />
 <meta name="theme-color" content="#05070d" />
-<link rel="canonical" href="https://deslandes1.github.io/PIPLIS-ELECTRONICS/" />
+<link rel="canonical" href="https://deslandes1.github.io/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/" />
 
 <!-- Open Graph / Social -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="PIPLIS ELECTRONICS | Security • Repair • Electronics" />
 <meta property="og:description" content="Affordable electronics, reliable repairs, security solutions and technology support for households and small businesses in Tampa, FL." />
-<meta property="og:url" content="https://deslandes1.github.io/PIPLIS-ELECTRONICS/" />
+<meta property="og:url" content="https://deslandes1.github.io/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- Apple / Add to Home Screen -->
@@ -41,7 +41,7 @@
   "legalName": "PIPLIS LLC",
   "slogan": "Security • Repair • Electronics",
   "description": "Electronics sales, repair services, security solutions, smart technology and small-business IT support in Tampa, Florida.",
-  "url": "https://deslandes1.github.io/PIPLIS-ELECTRONICS/",
+  "url": "https://deslandes1.github.io/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/",
   "telephone": "+1-813-297-7570",
   "email": "guepiplis@gmail.com",
   "priceRange": "$$",
@@ -173,6 +173,7 @@ header{
   width:40px;height:40px;border-radius:11px;flex:0 0 auto;
   background:var(--grad);display:grid;place-items:center;
   box-shadow:0 10px 26px -10px rgba(34,211,238,.85);
+  position:relative;
 }
 .logo-mark svg{width:22px;height:22px}
 .logo small{display:block;font-family:var(--font-b);font-size:.62rem;font-weight:600;letter-spacing:.19em;color:var(--muted);text-transform:uppercase;margin-top:-2px}
@@ -399,6 +400,7 @@ header{
   background:radial-gradient(circle,rgba(124,92,255,.25),transparent 70%);
   filter:blur(10px);pointer-events:none;
 }
+.jarvis-video-wrap{position:relative;width:100%}
 .jarvis-video{
   width:100%;border-radius:16px;border:1px solid var(--line-strong);
   background:#03060d;display:block;
@@ -435,6 +437,7 @@ header{
   background:rgba(34,211,238,.15);
   border:1px solid rgba(34,211,238,.4);
   color:var(--cyan);
+  z-index:2;
 }
 .cert-badge{
   width:78px;height:78px;border-radius:22px;
@@ -564,6 +567,40 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .reveal.in{opacity:1;transform:none}
 
+/* ============================================================
+   NUMBERED VISUAL BADGES — Piplis, videos, certificates
+   ============================================================ */
+.num-badge{
+  position:absolute;
+  z-index:8;
+  display:grid;place-items:center;
+  width:34px;height:34px;
+  border-radius:50%;
+  font-family:var(--font-h);
+  font-weight:700;
+  font-size:.95rem;
+  line-height:1;
+  letter-spacing:-.02em;
+  color:#03060d;
+  background:var(--grad);
+  border:2px solid #05070d;
+  box-shadow:0 10px 24px -8px rgba(34,211,238,.85), 0 0 0 3px rgba(34,211,238,.14);
+  pointer-events:none;
+  animation:badgePulse 3s ease-in-out infinite;
+}
+@keyframes badgePulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+.num-badge--sm{width:24px;height:24px;font-size:.74rem;border-width:2px}
+.num-badge--tl{top:12px;left:12px}
+.num-badge--tr{top:12px;right:12px}
+.num-badge--logo{top:-8px;left:-8px}
+
+@media (prefers-reduced-motion:reduce){
+  .num-badge{animation:none}
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1000px){
   .hero-grid{grid-template-columns:1fr}
@@ -625,6 +662,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <svg viewBox="0 0 24 24" fill="none" stroke="#03060d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z" fill="#03060d" stroke="none"/>
           </svg>
+          <span class="num-badge num-badge--sm num-badge--logo" aria-hidden="true">1</span>
         </span>
         <span>PIPLIS<small>Electronics</small></span>
       </a>
@@ -683,9 +721,11 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         </div>
       </div>
 
-      <!-- ============ TOP-RIGHT: PIPLIS AD VIDEO + FACEBOOK CTA ============ -->
+      <!-- ============ TOP-RIGHT: PIPLIS AD VIDEO (#2) + FACEBOOK CTA ============ -->
       <div class="hero-visual reveal">
         <div class="hero-video-card">
+          <span class="num-badge num-badge--tr" aria-hidden="true">2</span>
+
           <div class="hero-video-label">
             <span class="dot"></span>
             <span>Watch Our Latest Ad</span>
@@ -1012,19 +1052,23 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 
     <div class="jarvis-card reveal">
 
-      <video
-        class="jarvis-video"
-        controls
-        playsinline
-        preload="metadata"
-        controlsList="nodownload"
-      >
-        <source
-          src="https://raw.githack.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/main/Man_presenting_messaging_portal_a36187eb.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <!-- ============ JARVIS VIDEO (#3) ============ -->
+      <div class="jarvis-video-wrap">
+        <span class="num-badge num-badge--tr" aria-hidden="true">3</span>
+        <video
+          class="jarvis-video"
+          controls
+          playsinline
+          preload="metadata"
+          controlsList="nodownload"
+        >
+          <source
+            src="https://raw.githack.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/main/Man_presenting_messaging_portal_a36187eb.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       <div class="jarvis-cta">
         <div>
@@ -1062,7 +1106,10 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 
     <div class="grid grid-2">
 
+      <!-- ============ DEEPSEEK CERTIFICATE (#4) ============ -->
       <article class="card cert-card reveal">
+        <span class="num-badge num-badge--tl" aria-hidden="true">4</span>
+
         <div class="cert-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="8" r="6"/>
@@ -1072,13 +1119,16 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <div class="cert-meta">DeepSeek AI</div>
         <h3>AI Developer Certificate</h3>
         <p>Certificate of completion for AI-assisted software development using DeepSeek. Awarded to Gesner Deslandes.</p>
-        <a href="https://deslandes1.github.io/PIPLIS-ELECTRONICS/Gesner_Deslandes_DeepSeek_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+        <a href="https://deslandes1.github.io/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/Gesner_Deslandes_DeepSeek_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
           View Certificate
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
         </a>
       </article>
 
+      <!-- ============ GEMINI CERTIFICATE (#5) ============ -->
       <article class="card cert-card reveal">
+        <span class="num-badge num-badge--tl" aria-hidden="true">5</span>
+
         <div class="cert-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="8" r="6"/>
@@ -1088,7 +1138,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <div class="cert-meta">Google Gemini</div>
         <h3>AI Developer Certificate</h3>
         <p>Certificate of completion for AI-assisted software development using Google Gemini. Awarded to Gesner Deslandes.</p>
-        <a href="https://deslandes1.github.io/PIPLIS-ELECTRONICS/Gesner_Deslandes_Gemini_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+        <a href="https://deslandes1.github.io/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/Gesner_Deslandes_Gemini_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
           View Certificate
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
         </a>
