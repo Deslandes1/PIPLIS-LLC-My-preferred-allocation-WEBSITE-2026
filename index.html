@@ -568,37 +568,34 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 .reveal.in{opacity:1;transform:none}
 
 /* ============================================================
-   NUMBERED VISUAL BADGES — Piplis, videos, certificates
+   EYE ICON BADGE — standalone on each visual
    ============================================================ */
-.num-badge{
+.eye-badge{
   position:absolute;
   z-index:8;
   display:grid;place-items:center;
-  width:34px;height:34px;
+  width:38px;height:38px;
   border-radius:50%;
-  font-family:var(--font-h);
-  font-weight:700;
-  font-size:.95rem;
-  line-height:1;
-  letter-spacing:-.02em;
   color:#03060d;
   background:var(--grad);
   border:2px solid #05070d;
   box-shadow:0 10px 24px -8px rgba(34,211,238,.85), 0 0 0 3px rgba(34,211,238,.14);
   pointer-events:none;
-  animation:badgePulse 3s ease-in-out infinite;
+  animation:eyeBadgePulse 3s ease-in-out infinite;
 }
-@keyframes badgePulse{
+.eye-badge svg{width:20px;height:20px;display:block}
+@keyframes eyeBadgePulse{
   0%,100%{transform:scale(1)}
   50%{transform:scale(1.08)}
 }
-.num-badge--sm{width:24px;height:24px;font-size:.74rem;border-width:2px}
-.num-badge--tl{top:12px;left:12px}
-.num-badge--tr{top:12px;right:12px}
-.num-badge--logo{top:-8px;left:-8px}
+.eye-badge--sm{width:28px;height:28px;border-width:2px}
+.eye-badge--sm svg{width:14px;height:14px}
+.eye-badge--tl{top:12px;left:12px}
+.eye-badge--tr{top:12px;right:12px}
+.eye-badge--logo{top:-8px;left:-8px}
 
 @media (prefers-reduced-motion:reduce){
-  .num-badge{animation:none}
+  .eye-badge{animation:none}
 }
 
 /* ---------- Responsive ---------- */
@@ -662,7 +659,12 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <svg viewBox="0 0 24 24" fill="none" stroke="#03060d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z" fill="#03060d" stroke="none"/>
           </svg>
-          <span class="num-badge num-badge--sm num-badge--logo" aria-hidden="true">1</span>
+          <span class="eye-badge eye-badge--sm eye-badge--logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
         </span>
         <span>PIPLIS<small>Electronics</small></span>
       </a>
@@ -721,10 +723,15 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         </div>
       </div>
 
-      <!-- ============ TOP-RIGHT: PIPLIS AD VIDEO (#2) + FACEBOOK CTA ============ -->
+      <!-- ============ TOP-RIGHT: PIPLIS AD VIDEO + EYE BADGE ============ -->
       <div class="hero-visual reveal">
         <div class="hero-video-card">
-          <span class="num-badge num-badge--tr" aria-hidden="true">2</span>
+          <span class="eye-badge eye-badge--tr" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
 
           <div class="hero-video-label">
             <span class="dot"></span>
@@ -1052,9 +1059,14 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 
     <div class="jarvis-card reveal">
 
-      <!-- ============ JARVIS VIDEO (#3) ============ -->
+      <!-- ============ JARVIS VIDEO + EYE BADGE ============ -->
       <div class="jarvis-video-wrap">
-        <span class="num-badge num-badge--tr" aria-hidden="true">3</span>
+        <span class="eye-badge eye-badge--tr" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </span>
         <video
           class="jarvis-video"
           controls
@@ -1106,9 +1118,14 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 
     <div class="grid grid-2">
 
-      <!-- ============ DEEPSEEK CERTIFICATE (#4) ============ -->
+      <!-- ============ DEEPSEEK CERTIFICATE + EYE BADGE ============ -->
       <article class="card cert-card reveal">
-        <span class="num-badge num-badge--tl" aria-hidden="true">4</span>
+        <span class="eye-badge eye-badge--tl" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </span>
 
         <div class="cert-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1125,9 +1142,14 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         </a>
       </article>
 
-      <!-- ============ GEMINI CERTIFICATE (#5) ============ -->
+      <!-- ============ GEMINI CERTIFICATE + EYE BADGE ============ -->
       <article class="card cert-card reveal">
-        <span class="num-badge num-badge--tl" aria-hidden="true">5</span>
+        <span class="eye-badge eye-badge--tl" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </span>
 
         <div class="cert-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
