@@ -354,6 +354,39 @@ header{
 .store-item h4{font-family:var(--font-h);font-size:.98rem;margin-bottom:.32rem}
 .store-item p{font-size:.82rem}
 
+/* ---------- JARVIS section ---------- */
+.jarvis-card{
+  background:linear-gradient(160deg,#0d1a2c,#060a14);
+  border:1px solid rgba(34,211,238,.3);
+  border-radius:24px;
+  padding:clamp(1.4rem,3vw,2.4rem);
+  box-shadow:0 30px 70px -30px rgba(34,211,238,.35);
+  position:relative;
+  overflow:hidden;
+}
+.jarvis-card::before{
+  content:"";position:absolute;inset:-30% -20% auto auto;width:320px;height:320px;
+  background:radial-gradient(circle,rgba(124,92,255,.25),transparent 70%);
+  filter:blur(10px);pointer-events:none;
+}
+.jarvis-video{
+  width:100%;border-radius:16px;border:1px solid var(--line-strong);
+  background:#03060d;display:block;
+  aspect-ratio:16/9;object-fit:cover;
+}
+.jarvis-cta{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem;
+  align-items:center;margin-top:1.6rem;position:relative;
+}
+.jarvis-cta h3{margin-bottom:.5rem}
+.jarvis-cta p{font-size:.92rem;margin-bottom:0}
+.jarvis-cta .btn{justify-self:end}
+.jarvis-note{
+  margin-top:1rem;font-size:.78rem;color:var(--muted);
+  display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;position:relative;
+}
+.jarvis-note strong{color:var(--cyan);font-weight:600}
+
 /* ---------- Certifications ---------- */
 .cert-card{
   text-align:center;
@@ -508,6 +541,8 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .plans{grid-template-columns:1fr;max-width:460px;margin-inline:auto}
   .store-grid{grid-template-columns:repeat(2,1fr)}
+  .jarvis-cta{grid-template-columns:1fr;gap:1.2rem}
+  .jarvis-cta .btn{justify-self:start}
   .about-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -568,6 +603,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <li><a href="#business">Business IT</a></li>
         <li><a href="#repairs">Repairs</a></li>
         <li><a href="#store">Store</a></li>
+        <li><a href="#jarvis">JARVIS</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -932,6 +968,57 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
   </div>
 </section>
 
+<!-- ================= JARVIS ================= -->
+<section class="section" id="jarvis">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Featured Technology</span>
+      <h2>Meet <span class="grad-text">JARVIS</span></h2>
+      <p>A fast, secure messaging platform for group chats, instant voice notes, status updates, and high-quality voice &amp; video calls.</p>
+    </div>
+
+    <div class="jarvis-card reveal">
+
+      <video
+        class="jarvis-video"
+        controls
+        playsinline
+        preload="metadata"
+        controlsList="nodownload"
+        poster=""
+      >
+        <source
+          src="https://deslandes1.github.io/PIPLIS-ELECTRONICS/Man_presenting_messaging_portal_a36187eb.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="jarvis-cta">
+        <div>
+          <h3>Create your JARVIS account</h3>
+          <p>Enter your name to get started — no downloads, no complicated setup. Your private messaging portal opens right in the browser.</p>
+        </div>
+        <a
+          href="https://deslandes1.github.io/G-COMMUNICATION-2026/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Enter Your Name &amp; Create Account
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="jarvis-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Private &amp; peer-to-peer — your handle is your identity. <strong>No app store required.</strong></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ================= CERTIFICATIONS ================= -->
 <section class="section" id="certifications">
   <div class="wrap">
@@ -953,7 +1040,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <div class="cert-meta">DeepSeek AI</div>
         <h3>AI Developer Certificate</h3>
         <p>Certificate of completion for AI-assisted software development using DeepSeek. Awarded to Gesner Deslandes.</p>
-        <a href="https://github.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/blob/main/Gesner_Deslandes_DeepSeek_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+        <a href="https://deslandes1.github.io/PIPLIS-ELECTRONICS/Gesner_Deslandes_DeepSeek_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
           View Certificate
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
         </a>
@@ -969,7 +1056,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <div class="cert-meta">Google Gemini</div>
         <h3>AI Developer Certificate</h3>
         <p>Certificate of completion for AI-assisted software development using Google Gemini. Awarded to Gesner Deslandes.</p>
-        <a href="https://github.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/blob/main/Gesner_Deslandes_Gemini_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+        <a href="https://deslandes1.github.io/PIPLIS-ELECTRONICS/Gesner_Deslandes_Gemini_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
           View Certificate
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
         </a>
@@ -1182,6 +1269,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <li><a href="#about">About Us</a></li>
           <li><a href="#store">Store</a></li>
           <li><a href="#business">Business Plans</a></li>
+          <li><a href="#jarvis">JARVIS</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
