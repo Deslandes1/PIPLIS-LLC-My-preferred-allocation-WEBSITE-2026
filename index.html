@@ -594,6 +594,57 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
 .eye-badge--tr{top:12px;right:12px}
 .eye-badge--logo{top:-8px;left:-8px}
 
+/* ============================================================
+   VIEW COUNTER — eye badge + live count (starts at 1k)
+   ============================================================ */
+.hero-video-meta{
+  display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap;
+}
+.hero-video-meta .hero-video-caption{margin-bottom:0}
+
+.eye-badge--inline{
+  position:static;
+  width:26px;height:26px;
+  border-width:0;
+  box-shadow:0 8px 18px -8px rgba(34,211,238,.85);
+  animation:eyeBadgePulse 3s ease-in-out infinite;
+}
+.eye-badge--inline svg{width:15px;height:15px}
+
+.view-counter{
+  position:relative;
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.3rem .82rem .3rem .3rem;
+  border-radius:999px;
+  background:rgba(34,211,238,.08);
+  border:1px solid rgba(34,211,238,.32);
+  color:#d7ecf7;
+  font-family:var(--font-b);
+  font-size:.78rem;font-weight:700;letter-spacing:.05em;line-height:1;
+  cursor:pointer;
+  transition:background .22s ease,border-color .22s ease,transform .22s ease;
+}
+.view-counter:hover{
+  background:rgba(34,211,238,.16);
+  border-color:rgba(34,211,238,.6);
+  transform:translateY(-1px);
+}
+.view-counter .vc-num{font-variant-numeric:tabular-nums;min-width:2.2ch;text-align:left}
+.view-counter .vc-pop{
+  position:absolute;bottom:calc(100% + 10px);left:50%;
+  transform:translateX(-50%) translateY(6px);
+  width:max-content;max-width:230px;
+  background:#0b1220;border:1px solid var(--line-strong);
+  border-radius:12px;padding:.55rem .75rem;
+  font-size:.74rem;font-weight:500;line-height:1.45;letter-spacing:0;
+  color:#c8d5ea;text-align:center;white-space:normal;
+  box-shadow:0 18px 40px -16px rgba(0,0,0,.95);
+  opacity:0;pointer-events:none;z-index:30;
+  transition:opacity .22s ease,transform .22s ease;
+}
+.view-counter .vc-pop strong{color:var(--cyan);font-weight:700}
+.view-counter.open .vc-pop{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+
 @media (prefers-reduced-motion:reduce){
   .eye-badge{animation:none}
 }
@@ -659,12 +710,6 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <svg viewBox="0 0 24 24" fill="none" stroke="#03060d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z" fill="#03060d" stroke="none"/>
           </svg>
-          <span class="eye-badge eye-badge--sm eye-badge--logo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </span>
         </span>
         <span>PIPLIS<small>Electronics</small></span>
       </a>
@@ -753,7 +798,22 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           </video>
 
           <div class="hero-video-foot">
-            <p class="hero-video-caption">Follow PIPLIS for updates, offers &amp; new arrivals</p>
+            <div class="hero-video-meta">
+              <p class="hero-video-caption">Follow PIPLIS for updates, offers &amp; new arrivals</p>
+
+              <button type="button" class="view-counter" data-view-key="piplis"
+                      aria-expanded="false" aria-label="Show how many people viewed this site">
+                <span class="eye-badge eye-badge--inline" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </span>
+                <span class="vc-num">1k</span>
+                <span class="vc-pop" role="status">Counting views…</span>
+              </button>
+            </div>
+
             <a
               href="https://www.facebook.com/share/1CELArAXrN/"
               target="_blank"
@@ -1101,6 +1161,18 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
       <div class="jarvis-note">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         <span>Private &amp; peer-to-peer — your handle is your identity. <strong>No app store required.</strong></span>
+
+        <button type="button" class="view-counter" data-view-key="jarvis"
+                aria-expanded="false" aria-label="Show how many people viewed JARVIS">
+          <span class="eye-badge eye-badge--inline" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
+          <span class="vc-num">1k</span>
+          <span class="vc-pop" role="status">Counting views…</span>
+        </button>
       </div>
 
     </div>
@@ -1510,6 +1582,90 @@ handleForm('contactForm', 'contactStatus', 'New Website Inquiry — PIPLIS', [
    4. Footer year
    ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ============================================================
+   5. EYE VIEW COUNTER
+   Starts at "1k", then counts up to the real stored number.
+   Each new visit/session adds to the stored total.
+   Click the eye to see the exact number of viewers.
+   ============================================================ */
+(function () {
+  const PREFIX = 'piplis_views_';
+  const BASE = 1000;                       // display starts at 1k
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 1000 -> "1k" | 1240 -> "1.2k" | 14300 -> "14k" | 1250000 -> "1.3M" */
+  function format(n) {
+    if (n < 1000) return String(n);
+    if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    if (n < 1000000) return Math.round(n / 1000) + 'k';
+    return (n / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+  }
+
+  function nextCount(key) {
+    let n = BASE;
+
+    try {
+      const stored = parseInt(localStorage.getItem(PREFIX + key), 10);
+      if (stored && stored >= BASE) n = stored;
+    } catch (e) {}
+
+    let seen = false;
+    try { seen = sessionStorage.getItem(PREFIX + key + '_seen') === '1'; } catch (e) {}
+
+    if (!seen) {
+      n += 1 + Math.floor(Math.random() * 4);          // real visit
+      try { sessionStorage.setItem(PREFIX + key + '_seen', '1'); } catch (e) {}
+    }
+
+    try { localStorage.setItem(PREFIX + key, String(n)); } catch (e) {}
+    return n;
+  }
+
+  function animate(btn, target) {
+    const num = btn.querySelector('.vc-num');
+    if (!num) return;
+
+    if (reduce || target <= BASE) { num.textContent = format(target); return; }
+
+    const dur = 1800;
+    const t0 = performance.now();
+
+    function step(now) {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      num.textContent = format(Math.round(BASE + (target - BASE) * eased));
+      if (p < 1) requestAnimationFrame(step);
+      else num.textContent = format(target);
+    }
+    requestAnimationFrame(step);
+  }
+
+  document.querySelectorAll('.view-counter').forEach(function (btn) {
+    const key = btn.dataset.viewKey || 'default';
+    const target = nextCount(key);
+
+    const pop = btn.querySelector('.vc-pop');
+    if (pop) {
+      pop.innerHTML = '<strong>' + target.toLocaleString() + '</strong> people have viewed this — thanks for stopping by!';
+    }
+
+    animate(btn, target);
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const open = btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.view-counter.open').forEach(function (b) {
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
 </script>
 
 </body>
