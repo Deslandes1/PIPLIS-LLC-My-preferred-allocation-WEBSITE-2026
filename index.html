@@ -354,6 +354,47 @@ header{
 .store-item h4{font-family:var(--font-h);font-size:.98rem;margin-bottom:.32rem}
 .store-item p{font-size:.82rem}
 
+/* ---------- Certifications ---------- */
+.cert-card{
+  text-align:center;
+  padding:2rem 1.75rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.cert-card::before{
+  content:"✓ Verified";
+  position:absolute;
+  top:1rem;right:1rem;
+  font-size:.62rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.32rem .7rem;border-radius:999px;
+  background:rgba(34,211,238,.15);
+  border:1px solid rgba(34,211,238,.4);
+  color:var(--cyan);
+}
+.cert-badge{
+  width:78px;height:78px;border-radius:22px;
+  display:grid;place-items:center;
+  margin-bottom:1.2rem;
+  background:var(--grad-soft);
+  border:1px solid rgba(34,211,238,.35);
+  color:var(--cyan);
+}
+.cert-badge svg{width:38px;height:38px}
+.cert-meta{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--cyan);
+  padding:.35rem .8rem;border-radius:999px;
+  background:rgba(34,211,238,.08);
+  border:1px solid rgba(34,211,238,.25);
+  margin-bottom:.85rem;
+}
+.cert-card h3{margin-bottom:.5rem;font-size:1.15rem}
+.cert-card p{font-size:.9rem;margin-bottom:1.5rem;max-width:44ch}
+.cert-card .btn{margin-top:auto}
+
 /* ---------- About / why ---------- */
 .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,4vw,3.6rem);align-items:center}
 .why-list{display:grid;gap:.85rem;margin-top:1.6rem}
@@ -527,6 +568,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <li><a href="#business">Business IT</a></li>
         <li><a href="#repairs">Repairs</a></li>
         <li><a href="#store">Store</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -890,6 +932,58 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
   </div>
 </section>
 
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="section" id="certifications">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Certifications</span>
+      <h2>Credentials that <span class="grad-text">back the build</span></h2>
+      <p>This website was designed and built by <strong style="color:#fff">Gesner Deslandes</strong> — a certified AI-assisted developer. View the certificates below.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <article class="card cert-card reveal">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/>
+          </svg>
+        </div>
+        <div class="cert-meta">DeepSeek AI</div>
+        <h3>AI Developer Certificate</h3>
+        <p>Certificate of completion for AI-assisted software development using DeepSeek. Awarded to Gesner Deslandes.</p>
+        <a href="https://github.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/blob/main/Gesner_Deslandes_DeepSeek_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+          View Certificate
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </article>
+
+      <article class="card cert-card reveal">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/>
+          </svg>
+        </div>
+        <div class="cert-meta">Google Gemini</div>
+        <h3>AI Developer Certificate</h3>
+        <p>Certificate of completion for AI-assisted software development using Google Gemini. Awarded to Gesner Deslandes.</p>
+        <a href="https://github.com/Deslandes1/PIPLIS-LLC-My-preferred-allocation-WEBSITE-2026/blob/main/Gesner_Deslandes_Gemini_AI_Developer_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+          View Certificate
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </article>
+
+    </div>
+
+    <p class="form-note reveal" style="margin-top:1.8rem">
+      Built by Gesner Deslandes, Software Engineer —
+      <a href="mailto:deslandes78@gmail.com" style="color:var(--cyan);font-weight:600">deslandes78@gmail.com</a>
+    </p>
+  </div>
+</section>
+
 <!-- ================= ABOUT ================= -->
 <section class="section" id="about">
   <div class="wrap">
@@ -938,6 +1032,11 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
         <p style="margin-bottom:0;font-size:.87rem">Monthly support plans that keep small businesses running without an IT department.</p>
       </div>
     </div>
+
+    <p class="form-note reveal" style="margin-top:2rem">
+      Website designed &amp; built by Gesner Deslandes —
+      <a href="#certifications" style="color:var(--cyan);font-weight:600">view certifications →</a>
+    </p>
   </div>
 </section>
 
@@ -1054,7 +1153,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <a href="https://wa.me/18132977570" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a13.6 13.6 0 0 1-5.1-3.3 11 11 0 0 1-2.3-3.8c-.2-.7 0-1.3.3-1.7l.6-.7c.2-.2.4-.2.6-.2h.4c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.4.5c-.1.2-.2.3 0 .6.4.7 1 1.4 1.6 1.9.6.5 1.2.8 1.7 1 .2.1.4 0 .5-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.2Z"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/1CELArAXrN/" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
           </a>
           <a href="#" aria-label="Instagram">
@@ -1083,6 +1182,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <li><a href="#about">About Us</a></li>
           <li><a href="#store">Store</a></li>
           <li><a href="#business">Business Plans</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1094,6 +1194,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2rem;margin-top:2rem;back
           <li><a href="mailto:guepiplis@gmail.com">guepiplis@gmail.com</a></li>
           <li><a href="#contact">5200 Chilkoot St<br>Temple Terrace, FL 33617</a></li>
           <li><a href="https://wa.me/18132977570" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+          <li><a href="https://www.facebook.com/share/1CELArAXrN/" target="_blank" rel="noopener">Facebook Page</a></li>
         </ul>
       </div>
     </div>
@@ -1145,8 +1246,6 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 
 /* ============================================================
    3. Forms → email (no backend needed)
-      To use Formspree instead:
-      replace buildMailto/submit below with a normal fetch() POST.
    ============================================================ */
 const OWNER_EMAIL = 'guepiplis@gmail.com';
 
